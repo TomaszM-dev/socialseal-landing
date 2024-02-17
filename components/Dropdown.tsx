@@ -36,10 +36,13 @@ const Dropdown = ({ data }: { data: NavbarItemTypes }) => {
       initial="hidden"
       whileInView={"show"}
       exit="hidden"
-      className="flex  border-t border-gray-100 absolute top-0 left-0 mt-24 w-full bg-white px-10 flex-col gap-20"
+      className="flex pb-10 shadow-lg border-t border-gray-100 absolute top-0 left-0 mt-24 max-md:mt-32 w-full bg-white px-10 flex-col gap-20 z-10"
     >
       {[data]?.map((item, index) => (
-        <div key={index} className="flex justify-between w-full gap-10">
+        <div
+          key={index}
+          className="grid grid-cols-4 max-md:grid-cols-2 w-full gap-10 max-md:px-4"
+        >
           {renderColumn(item.firstColumn)}
           {renderColumn(item.secondColumn)}
           {renderColumn(item.thirdColumn)}
