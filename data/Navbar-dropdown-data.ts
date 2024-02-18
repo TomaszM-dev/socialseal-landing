@@ -2,7 +2,7 @@ export const navbarDropdownData = () => [
   {
     link: "Services",
 
-    firstColumn: {
+    infoContainer1: {
       headline: "Fundamentals",
 
       info: [
@@ -12,7 +12,7 @@ export const navbarDropdownData = () => [
         "Training",
       ],
     },
-    secondColumn: {
+    infoContainer2: {
       headline: "Content",
       info: [
         "Resarch & Planning",
@@ -21,7 +21,7 @@ export const navbarDropdownData = () => [
         "Keyboard Optimization",
       ],
     },
-    thirdColumn: {
+    infoContainer3: {
       headline: "Public Relations",
       info: [
         "Inbox Management",
@@ -30,7 +30,7 @@ export const navbarDropdownData = () => [
         "Crisis Management",
       ],
     },
-    fourthColumn: {
+    infoContainer4: {
       headline: "Market Growth",
       info: [
         "Paid Advertising Setup",
@@ -43,19 +43,19 @@ export const navbarDropdownData = () => [
   {
     link: "Plans Pricing",
 
-    firstColumn: {
+    infoContainer1: {
       headline: "Management",
       paragraph:
         "Great for those starting up in Social Media and looking for a regular management service to keep up.",
       info: ["Rates", "Feautures", "Sign Up"],
     },
-    secondColumn: {
+    infoContainer2: {
       headline: "Growth Plans",
       paragraph:
         "Geared for those looking to grow their Social Media presence and capitalize on marketing benefits.",
       info: ["Rates", "Feautures", "Sign Up"],
     },
-    thirdColumn: {
+    infoContainer3: {
       headline: "Custom Plans",
       info: [
         "Inbox Management",
@@ -64,7 +64,7 @@ export const navbarDropdownData = () => [
         "Crisis Management",
       ],
     },
-    fourthColumn: {
+    infoContainer4: {
       headline: "Growth",
       info: [
         "Paid Advertising Setup",

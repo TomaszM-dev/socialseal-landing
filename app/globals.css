@@ -20,6 +20,6 @@
   }
 
   .section {
-    @apply w-full h-screen pt-[60px] xl:pt-[120px];
+    @apply w-full max-w-[1440px] mx-auto px-10;
   }
 }

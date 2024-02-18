@@ -3,8 +3,10 @@ import { NavbarDropdownData } from "@/types/NavbarTypes";
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import Dropdown from "./Dropdown";
-import MobileDropdown from "./MobileDropdown";
+import MobileDropdown from "../dropdown/MobileDropdown";
+import Link from "next/link";
+import DeskopDropdown from "../dropdown/desktop-dropdown-components/DesktopDropDown";
+
 const navbarData: NavbarDropdownData = navbarDropdownData();
 const NavbarLinks = () => {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
@@ -37,20 +39,21 @@ const NavbarLinks = () => {
 
   return (
     <div className=" flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.5rem] items-center max-sm:flex-col">
-      <p>Marketing</p>
-      <p>Management</p>
-      <p>Increase Sales</p>
+      <Link href="/">Marketing</Link>
+      <Link href="/">Management</Link>
+      <Link href="/">Increase Sales</Link>
       {navbarData.map((data) => (
         <div
           key={data.link}
           className="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center  max-sm:w-full"
         >
-          <button
+          <Link
+            href={"/"}
             className={`${
               dropdownStates[data.link]
-                ? "active max-sm:border-b-[1px]   max-sm:pb-4 max-sm:border-accent-orange"
+                ? "active max-sm:border-b-[1px] max-sm:z-20  max-sm:pb-4 max-sm:border-accent-orange"
                 : ""
-            } flex items-center gap-1 cursor-pointer `}
+            } flex items-center gap-1 cursor-pointer  `}
             onClick={() => handleClick(data.link)}
           >
             {data.link}
@@ -61,10 +64,10 @@ const NavbarLinks = () => {
                 <IoIosArrowDown />
               )}
             </div>
-          </button>
+          </Link>
           {!isMobileScreen ? (
             <AnimatePresence mode="wait">
-              {dropdownStates[data.link] && <Dropdown data={data} />}
+              {dropdownStates[data.link] && <DeskopDropdown data={data} />}
             </AnimatePresence>
           ) : (
             <AnimatePresence mode="wait">
