@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import MobileDropdown from "../dropdown/MobileDropdown";
 import Link from "next/link";
-import DeskopDropdown from "../dropdown/desktop-dropdown-components/DesktopDropDown";
+import DeskopDropdown from "../dropdown/desktop-dropdown-components/DesktopDropdown";
 
 const navbarData: NavbarDropdownData = navbarDropdownData();
 const NavbarLinks = () => {
@@ -38,7 +38,7 @@ const NavbarLinks = () => {
   };
 
   return (
-    <div className=" flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.5rem] items-center max-sm:flex-col">
+    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.5rem] items-center max-sm:flex-col">
       <Link href="/">Marketing</Link>
       <Link href="/">Management</Link>
       <Link href="/">Increase Sales</Link>

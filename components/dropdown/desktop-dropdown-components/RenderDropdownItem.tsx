@@ -12,6 +12,7 @@ const renderDropdownItem = (item: NavbarItemTypes, index: number) => {
       key={index}
       className="grid grid-cols-4 max-md:grid-cols-2 w-full gap-10 max-md:px-4"
     >
+      {/* @ts-ignore */}
       {columns.map((information) => renderInformations(information))}
     </div>
   );

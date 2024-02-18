@@ -6,10 +6,10 @@ export interface ColumnTypes {
 
 export interface NavbarItemTypes {
   link: string;
-  firstColumn: ColumnTypes;
-  secondColumn: ColumnTypes;
-  thirdColumn: ColumnTypes;
-  fourthColumn: ColumnTypes;
+  infoContainer1: ColumnTypes;
+  infoContainer2: ColumnTypes;
+  infoContainer3: ColumnTypes;
+  infoContainer4: ColumnTypes;
 }
 
 export type NavbarDropdownData = NavbarItemTypes[];
