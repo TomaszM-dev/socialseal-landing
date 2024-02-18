@@ -9,7 +9,7 @@ import { NavbarDropdownData } from "@/types/NavbarTypes";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarLinks from "./NavbarLinks";
 import { fadeIn } from "@/animations/animations";
-import SpeakWithUsButton from "./SpeakWithUsButton";
+import Button from "../buttons/Button";
 
 const Navbar = () => {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
@@ -41,11 +41,16 @@ const Navbar = () => {
           />
         </div>
         {!isTabletScreen && !isMobileScreen && <NavbarLinks />}
-        {isMobileScreen || <SpeakWithUsButton />}
+        {isMobileScreen || (
+          <Button
+            className="bg-accent-orange  text-white"
+            children="Speak With Us"
+          />
+        )}
 
         <GiHamburgerMenu
           onClick={() => setOpenLinks(!openLinks)}
-          className="md:hidden  cursor-pointer text-[1.8rem] text-accent-orange"
+          className="md:hidden  cursor-pointer text-[1.8rem] text-accent-orange max-md:ml-6"
         />
       </div>
       <AnimatePresence mode="wait">
@@ -71,7 +76,10 @@ const Navbar = () => {
             className=" absolute top-28 left-0 z-10 w-screen shadow-lg pb-10  bg-white flex flex-col items-center gap-10"
           >
             <NavbarLinks />
-            <SpeakWithUsButton />
+            <Button
+              className="bg-accent-orange max-sm:px-20 max-sm:py-5 text-white text-[1.2rem] rounded-2xl"
+              children="Speak With Us!"
+            />
           </motion.div>
         )}
       </AnimatePresence>

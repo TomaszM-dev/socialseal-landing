@@ -1,4 +1,3 @@
-// MobileDropdown.tsx
 import React from "react";
 import { motion } from "framer-motion";
 import { ColumnTypes, NavbarItemTypes } from "@/types/NavbarTypes";

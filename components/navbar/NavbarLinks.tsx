@@ -38,7 +38,7 @@ const NavbarLinks = () => {
   };
 
   return (
-    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.5rem] items-center max-sm:flex-col">
+    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.4rem] items-center max-sm:flex-col">
       <Link href="/">Marketing</Link>
       <Link href="/">Management</Link>
       <Link href="/">Increase Sales</Link>
