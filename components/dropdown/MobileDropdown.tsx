@@ -25,7 +25,7 @@ const MobileDropdown = ({ data }: { data: NavbarItemTypes }) => {
         {renderHeadlines(data).map((headline) => {
           return (
             <Link
-              className="text-[1.4rem] font-[200]"
+              className="text-[1.1rem] font-[300]"
               href="/"
               key={headline.headline}
             >

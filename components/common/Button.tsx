@@ -11,11 +11,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         className={cn(
           `
-        w-auto 
         rounded-3xl
         relative
-        px-10
-        py-4
         hover:opacity-75
         transition
       `,

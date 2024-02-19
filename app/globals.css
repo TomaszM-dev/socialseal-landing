@@ -20,7 +20,7 @@
   }
 
   .section {
-    @apply w-full max-w-[1440px] mx-auto px-10;
+    @apply w-full max-w-[1440px] mx-auto;
   }
 
   .shadow-dropdown {
