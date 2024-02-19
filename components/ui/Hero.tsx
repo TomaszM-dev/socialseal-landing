@@ -37,10 +37,10 @@ const Hero = () => {
       section w-full mt-10  max-xmd:gap-20  max-xmd:flex-col max-sm:gap-10  "
       >
         <div className="flex-1  max-xmd:items-center w-full h-full px-10 max-sm:px-4  flex flex-col justify-start gap-10">
-          <Button className="px-4 max-xmd:px-6 max-xmd:text-[1.3rem] bg-accent-orange w-fit text-white py-3">
+          <Button className="px-4 max-sm:text-[1.2rem] max-sm:w-full max-xmd:px-6 max-xmd:text-[1.3rem] bg-accent-orange w-fit text-white py-3">
             Social Media Marketing That works
           </Button>
-          <h1 className="text-[3.8rem] text-primary-dark font-[700] leading-[3.7rem] max-xmd:leading-[5rem] max-sm:text-[2.7rem] max-sm:leading-[4rem] capitalize max-xmd:text-center">
+          <h1 className="text-[3.8rem] text-primary-dark font-[700] leading-[3.7rem] max-xmd:leading-[5rem] max-sm:text-[2.5rem] max-sm:leading-[3.6rem] capitalize max-xmd:text-center ">
             Save Time <br className="max-xmd:hidden " /> Build Connections
             Increase Profits
           </h1>
@@ -73,10 +73,10 @@ const Hero = () => {
           </div>
         )}
       </div>
-      <div className="w-full  rounded-3xl max-md:mt-2 mt-10 flex items-center justify-center bg-[#1D1D25] p-10 relative ">
+      <div className="w-full  rounded-3xl max-md:mt-2 mt-10 flex items-center justify-center bg-[#1D1D25] p-10 max-md:p-16 relative  max-md:mx-auto">
         <Image
           src={brands}
-          className="object-cover  max-md:h-full  max-md:w-full  max-md:px-0"
+          className="object-cover     max-md:absolute max-md:top-10 max-md:left-0 max-md:w-full max-md:h-[3rem] max-md:px-0"
           alt=""
         ></Image>
       </div>
