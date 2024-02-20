@@ -30,13 +30,13 @@ const Hero = () => {
   return (
     <section
       className="flex 
-      section w-full mt-10  max-sm:mt-0 flex-col gap-20"
+      section w-full mt-4 px-10 max-sm:mt-0 flex-col gap-20"
     >
       <div
         className="flex h-fit
-      section w-full mt-10  max-xmd:gap-20  max-xmd:flex-col max-sm:gap-10  "
+      section w-full   gap-14 max-xmd:gap-20  max-xmd:flex-col max-sm:gap-10  "
       >
-        <div className="flex-1  max-xmd:items-center w-full h-full px-10 max-sm:px-4  flex flex-col justify-start gap-10">
+        <div className="flex-1  max-xmd:items-center w-full h-full  max-sm:px-4  flex flex-col justify-start gap-10 mt-10">
           <Button className="px-4 max-sm:px-2 max-sm:text-[1.1rem] max-sm:w-full max-xmd:px-6 max-xmd:text-[1.3rem] bg-accent-orange w-fit text-white py-3">
             Social Media Marketing That works
           </Button>
@@ -46,7 +46,7 @@ const Hero = () => {
           </h1>
           {!isTabScreen && <ViewPlans />}
         </div>
-        <div className="flex-1 relative w-full px-10 max-sm:px-4 flex  gap-4  max-xmd:mx-auto  max-sm:w-[100%] max-xmd:justify-center ">
+        <div className="flex-1 relative w-full  max-sm:px-4 flex  gap-4  max-xmd:mx-auto  max-sm:w-[100%] max-xmd:justify-center ">
           <div className="flex relative flex-col gap-4 ">
             <Image
               src={shopGirl}
@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
         )}
       </div>
-      <div className="w-full  rounded-3xl max-md:mt-2 mt-10 flex items-center justify-center bg-[#1D1D25] p-10 max-md:p-16 relative  max-md:mx-auto">
+      <div className="w-full  mx-auto  rounded-3xl max-md:mt-2 mt-2 flex items-center justify-center bg-[#1D1D25] p-10 max-md:p-16 relative  max-md:mx-auto">
         <Image
           src={brands}
           className="object-cover     max-md:absolute max-md:top-10 max-md:left-0 max-md:w-full max-md:h-[3rem] max-md:px-0"
@@ -98,6 +98,9 @@ const ViewPlans = () => {
       <div className="flex mt-6 gap-16">
         <Button className="bg-accent-blue px-8 py-5 text-white rounded-2xl text-[1.1rem]">
           View Our Plans
+        </Button>
+        <Button className="max-sm:hidden text-accent-blue text-[1.1rem]">
+          What We Offer
         </Button>
       </div>
     </>

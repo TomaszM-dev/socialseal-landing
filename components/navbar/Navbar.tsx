@@ -40,8 +40,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="max-md:px-4 max-w-[1440px] mx-auto w-full py-7 px-10  bg-[#FEFEFE] z-20 relative ">
-      <div className="flex justify-between overflow-hidden items-center ">
+    <nav className="max-md:px-4  mx-auto w-full py-7 px-10  bg-[#FEFEFE] z-20 relative ">
+      <div className="max-w-[1200px] mx-auto flex justify-between overflow-hidden items-center ">
         <div className="max-md:flex-1">
           <Image
             src={logoImg}

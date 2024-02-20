@@ -12,7 +12,7 @@ const DeskopDropdown = ({ data }: { data: NavbarItemTypes }) => {
       initial="hidden"
       whileInView={"show"}
       exit="hidden"
-      className="absolute top-24 max-md:top-36 left-0 w-full backdrop-contrast-75 h-screen z-10"
+      className="absolute top-24 max-md:top-36 left-0 backdrop-contrast-75 h-[200vh] z-10 w-screen"
     >
       <motion.div
         exit="hidden"
