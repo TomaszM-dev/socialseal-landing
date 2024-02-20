@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import logoImg from "../../public/logo/social-seal-logo.png";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { navbarDropdownData } from "@/data/Navbar-dropdown-data";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { NavbarDropdownData } from "@/types/NavbarTypes";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarLinks from "./NavbarLinks";
@@ -22,10 +22,21 @@ const Navbar = () => {
       setIsMobileScreen(width <= 685);
       setIsTabletScreen(width > 685 && width <= 1008);
     };
+
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setOpenLinks(false);
+      }
+    };
+    handleResize();
     handleResize();
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (

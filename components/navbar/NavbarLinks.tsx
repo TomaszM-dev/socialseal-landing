@@ -1,11 +1,12 @@
 import { navbarDropdownData } from "@/data/Navbar-dropdown-data";
 import { NavbarDropdownData } from "@/types/NavbarTypes";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import MobileDropdown from "../dropdown/MobileDropdown";
 import Link from "next/link";
 import DeskopDropdown from "../dropdown/desktop-dropdown-components/DesktopDropdown";
+import { fadeIn } from "@/animations/animations";
 
 const navbarData: NavbarDropdownData = navbarDropdownData();
 const NavbarLinks = () => {
@@ -51,12 +52,13 @@ const NavbarLinks = () => {
   };
 
   return (
-    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col ">
+    <motion.div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col ">
       <Link href="/">Marketing</Link>
       <Link href="/">Management</Link>
       <Link href="/">Increase Sales</Link>
+
       {navbarData.map((data) => (
-        <div
+        <motion.div
           key={data.link}
           className="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center  max-sm:w-full"
         >
@@ -87,9 +89,9 @@ const NavbarLinks = () => {
               {dropdownStates[data.link] && <MobileDropdown data={data} />}
             </AnimatePresence>
           )}
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
