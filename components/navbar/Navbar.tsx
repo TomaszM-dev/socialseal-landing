@@ -29,8 +29,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className=" max-md:px-4 max-w-[1440px] mx-auto w-full py-7 px-10 relative bg-[#FEFEFE] ">
-      <div className="flex justify-between overflow-hidden items-center">
+    <nav className="max-md:px-4 max-w-[1440px] mx-auto w-full py-7 px-10  bg-[#FEFEFE] z-20 relative ">
+      <div className="flex justify-between overflow-hidden items-center ">
         <div className="max-md:flex-1">
           <Image
             src={logoImg}
@@ -40,6 +40,8 @@ const Navbar = () => {
             height={100}
           />
         </div>
+
+        {/* genertaing navbar links */}
         {!isTabletScreen && !isMobileScreen && <NavbarLinks />}
         {isMobileScreen || (
           <Button className="bg-accent-orange px-7 py-3 rounde  text-white">
@@ -72,12 +74,14 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className=" absolute top-28 left-0 z-10 w-screen shadow-lg pb-10  bg-white flex flex-col items-center gap-10"
+            className="absolute top-24 left-0 h-screen backdrop-brightness-75 w-full"
           >
-            <NavbarLinks />
-            <Button className="bg-accent-orange max-sm:px-20 max-sm:py-5 text-white text-[1.2rem] rounded-2xl">
-              Speak With Us
-            </Button>
+            <motion.div className=" absolute top-0 left-0 z-10 w-screen shadow-lg pb-10  bg-white flex flex-col items-center gap-10">
+              <NavbarLinks />
+              <Button className="bg-accent-orange max-sm:px-20 max-sm:py-5 text-white text-[1.2rem] rounded-2xl">
+                Speak With Us
+              </Button>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

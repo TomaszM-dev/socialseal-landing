@@ -19,11 +19,24 @@ const NavbarLinks = () => {
       const width = window.innerWidth;
       setIsMobileScreen(width <= 685);
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setDropdownStates({});
+      }
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  console.log(window.innerHeight);
 
   const handleClick = (link: string) => {
     setDropdownStates((prevState) => ({
@@ -38,7 +51,7 @@ const NavbarLinks = () => {
   };
 
   return (
-    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col">
+    <div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col ">
       <Link href="/">Marketing</Link>
       <Link href="/">Management</Link>
       <Link href="/">Increase Sales</Link>

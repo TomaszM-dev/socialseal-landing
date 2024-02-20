@@ -29,8 +29,8 @@ const Hero = () => {
 
   return (
     <section
-      className="flex h-fit
-      section w-full mt-10  max-sm:mt-0 flex-col gap-20   "
+      className="flex 
+      section w-full mt-10  max-sm:mt-0 flex-col gap-20  h-[200vh]  "
     >
       <div
         className="flex h-fit
