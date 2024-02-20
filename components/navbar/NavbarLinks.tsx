@@ -50,7 +50,7 @@ const NavbarLinks = () => {
   };
 
   return (
-    <motion.div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col ">
+    <motion.div className="flex  max-md:w-full max-md:justify-between overflow-hidden gap-6 text-primary-dark text-[1rem] max-sm:text-[1.1rem] items-center max-sm:flex-col max-sm:mt-4 ">
       <Link href="/">Marketing</Link>
       <Link href="/">Management</Link>
       <Link href="/">Increase Sales</Link>

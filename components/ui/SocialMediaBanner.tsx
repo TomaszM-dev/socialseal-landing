@@ -3,6 +3,11 @@ import React from "react";
 import Button from "../common/Button";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import customers from "../../public/social-media-banner/customers.png";
+import projects from "../../public/social-media-banner/projects.png";
+import workers from "../../public/social-media-banner/workers.png";
+import office from "../../public/social-media-banner/office.png";
+import Image from "next/image";
 
 const SocialMediaBanner = () => {
   const [ref, inView] = useInView({
@@ -12,7 +17,7 @@ const SocialMediaBanner = () => {
   return (
     <section
       ref={ref}
-      className=" mt-[-4rem]  pt-40 pb-20 text-center  bg-[#292F3E] text-white  "
+      className=" mt-[-4rem]  pt-40 pb-20  max-md:text-center  bg-[#292F3E] text-white  "
     >
       <div className="section flex  gap-5 px-10 max-md:flex-col max-md:px-[5rem] max-sm:px-4">
         <div className="flex-1 flex flex-col gap-7">
@@ -46,21 +51,25 @@ const SocialMediaBanner = () => {
         </div>
 
         <div className="flex-1  max-sm:gap-6 gap-4 max-md:gap-8 px-4 flex  max-sm:flex-col  ">
-          <div className="flex-1 max-sm:gap-6  max-sm:flex-none  flex-col max-sm:mt-0  mt-20  max-md:h-[30rem]  gap-10 flex items-center max-md:items-end max-sm:items-center">
-            <div className="rounded-xl flex-1  max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
+          <div className="flex-1 max-sm:gap-6  max-sm:flex-none  flex-col max-sm:mt-0  mt-20  max-md:h-[30rem] gap-10 flex items-center max-md:items-end max-sm:items-center">
+            <div className="relative rounded-xl flex-1  max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
               {inView && (
                 <CountUp
-                  className="text-[3rem] font-[800] text-[#F76766]"
+                  className="text-[3rem] font-[800] z-10 text-[#F76766]"
                   start={0}
                   end={100}
                   duration={3}
                   delay={0}
                 />
               )}
-
-              <p className="text-[1.2rem]">Offices</p>
+              <Image
+                className="absolute bottom-0 left-0 z-2"
+                src={office}
+                alt=""
+              />
+              <p className="text-[1.2rem] z-10">Offices</p>
             </div>
-            <div className=" rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
+            <div className=" rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 relative ">
               {inView && (
                 <CountUp start={0} end={15} duration={3} delay={0.4}>
                   {({ countUpRef }) => (
@@ -71,12 +80,16 @@ const SocialMediaBanner = () => {
                   )}
                 </CountUp>
               )}
-
-              <p className="text-[1.2rem]">Customers</p>
+              <Image
+                className="absolute bottom-0 left-0 z-2"
+                src={customers}
+                alt=""
+              />
+              <p className="text-[1.2rem] z-10">Customers</p>
             </div>
           </div>
           <div className=" flex-1 max-sm:gap-6 max-sm:flex-none  flex-col max-sm:mt-0    max-md:h-[30rem]  gap-10 flex items- max-md:items-start max-sm:items-center ">
-            <div className="rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
+            <div className="rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 relative">
               {inView && (
                 <CountUp
                   className="text-[3rem] font-[800] text-[#265FDB]"
@@ -86,9 +99,14 @@ const SocialMediaBanner = () => {
                   delay={0.2}
                 />
               )}
-              <p className="text-[1.2rem]">Workers</p>
+              <p className="text-[1.2rem] z-10">Workers</p>
+              <Image
+                className="absolute bottom-0 right-0 z-2 max-sm:left-0"
+                src={workers}
+                alt=""
+              />
             </div>
-            <div className=" rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
+            <div className=" rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white relative text-black flex flex-col items-center justify-center gap-4 ">
               {inView && (
                 <CountUp
                   separator=""
@@ -98,15 +116,20 @@ const SocialMediaBanner = () => {
                   delay={0.2}
                 >
                   {({ countUpRef }) => (
-                    <div className="text-[3rem] font-[800] text-[#A666F7]">
+                    <div className="text-[3rem] z-10 font-[800] text-[#A666F7]">
                       <span ref={countUpRef}></span>
                       <span>+</span>
                     </div>
                   )}
                 </CountUp>
               )}
+              <Image
+                className="absolute bottom-0 right-0 z-2 max-sm:left-0"
+                src={projects}
+                alt=""
+              />
 
-              <p className="text-[1.2rem]">Projects</p>
+              <p className="text-[1.2rem] z-10">Projects</p>
             </div>
           </div>
         </div>

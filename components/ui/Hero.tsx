@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section
       className="flex 
-      section w-full mt-4 px-10 max-sm:mt-0 flex-col gap-20"
+      section w-full mt-4 max-sm:px-2 px-10 max-sm:mt-0 flex-col gap-20"
     >
       <div
         className="flex h-fit
@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
         )}
       </div>
-      <div className="w-full  mx-auto  rounded-3xl max-md:mt-2 mt-2 flex items-center justify-center bg-[#1D1D25] p-10 max-md:p-16 relative  max-md:mx-auto">
+      <div className="w-full   mx-auto  rounded-3xl max-md:mt-2 mt-2 flex items-center justify-center bg-[#1D1D25] p-10 max-md:p-16 relative  max-md:mx-auto">
         <Image
           src={brands}
           className="object-cover     max-md:absolute max-md:top-10 max-md:left-0 max-md:w-full max-md:h-[3rem] max-md:px-0"
@@ -95,11 +95,11 @@ const ViewPlans = () => {
         <PiGoogleLogoThin />
         <SlSocialYoutube />
       </div>
-      <div className="flex mt-6 gap-16">
-        <Button className="bg-accent-blue px-8 py-5 text-white rounded-2xl text-[1.1rem]">
+      <div className="flex mt-6 max-sm:mt-0 gap-16 max-sm:w-full">
+        <Button className="bg-accent-blue max-sm:w-full max-sm:rounded-3xl px-8 py-5 text-white rounded-2xl text-[1.1rem]">
           View Our Plans
         </Button>
-        <Button className="max-sm:hidden text-accent-blue text-[1.1rem]">
+        <Button className="max-md:hidden text-accent-blue text-[1.1rem]">
           What We Offer
         </Button>
       </div>

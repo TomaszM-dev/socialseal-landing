@@ -85,9 +85,9 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute top-24 left-0 h-screen backdrop-brightness-75 w-full"
+            className="absolute  top-24 left-0 h-screen backdrop-brightness-75 w-full"
           >
-            <motion.div className=" absolute top-0 left-0 z-10 w-screen shadow-lg pb-10  bg-white flex flex-col items-center gap-10">
+            <motion.div className="  max absolute top-0 left-0 z-10 w-screen shadow-lg pb-10  bg-white flex flex-col items-center gap-10">
               <NavbarLinks />
               <Button className="bg-accent-orange max-sm:px-20 max-sm:py-5 text-white text-[1.2rem] rounded-2xl">
                 Speak With Us
