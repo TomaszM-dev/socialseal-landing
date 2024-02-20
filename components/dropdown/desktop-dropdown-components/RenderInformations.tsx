@@ -2,7 +2,7 @@ import { ColumnTypes } from "@/types/NavbarTypes";
 
 export const renderInformations = (information: ColumnTypes) => {
   return (
-    <div className="mt-10 flex-1">
+    <div key={information.headline} className="mt-10 flex-1">
       <h3 className="text-[1.5rem] text-secondary-dark font-light border-b-[1px] border-gray-100 pb-4">
         {information.headline}
       </h3>

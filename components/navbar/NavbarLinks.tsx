@@ -37,8 +37,6 @@ const NavbarLinks = () => {
     };
   }, []);
 
-  console.log(window.innerHeight);
-
   const handleClick = (link: string) => {
     setDropdownStates((prevState) => ({
       ...Object.fromEntries(

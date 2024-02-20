@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section
       className="flex 
-      section w-full mt-10  max-sm:mt-0 flex-col gap-20  h-[200vh]  "
+      section w-full mt-10  max-sm:mt-0 flex-col gap-20"
     >
       <div
         className="flex h-fit

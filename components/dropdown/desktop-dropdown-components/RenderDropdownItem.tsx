@@ -9,10 +9,9 @@ const renderDropdownItem = (item: NavbarItemTypes, index: number) => {
 
   return (
     <div
-      key={index}
+      key={item.link}
       className="grid grid-cols-4 max-md:grid-cols-2 w-full gap-10 max-md:px-4"
     >
-      {/* @ts-ignore */}
       {columns.map((information) => renderInformations(information))}
     </div>
   );
