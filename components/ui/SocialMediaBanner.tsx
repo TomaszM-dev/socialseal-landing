@@ -21,10 +21,10 @@ const SocialMediaBanner = () => {
     >
       <div className="section flex  gap-5 px-10 max-md:flex-col max-md:px-[5rem] max-sm:px-4">
         <div className="flex-1 flex flex-col gap-7">
-          <p className="text-[#FFD437] font-[500] text-[20px]">
+          <p className="text-[#FFD437] font-[400] text-[20px]">
             Social Media Management is
           </p>
-          <h2 className="text-[2.9rem] font-[700] leading-[4rem]">
+          <h2 className="text-[3.1rem] font-[700] leading-[4rem]">
             Building Brands Creating Connections Driving Sales
           </h2>
           <div className="flex  flex-col gap-6 text-[#BBBBBB] text-[1.1rem] font-[300] leading-[33px]">
@@ -40,8 +40,8 @@ const SocialMediaBanner = () => {
             </p>
             <p>After all; when you grow, we grow together.</p>
           </div>
-          <div className="flex gap-14 mt-10 max-md:items-center max-md:justify-center max-md:mb-10 max-sm:gap-8 max-sm:flex-col">
-            <Button className="bg-accent-blue px-8 max-sm:px-20  py-5 text-white rounded-2xl text-[1.1rem]">
+          <div className="flex  gap-14 mt-10 max-md:items-center max-md:justify-center max-md:mb-10 max-sm:gap-8 max-sm:flex-col">
+            <Button className="bg-accent-blue max-sm:w-full px-8 max-sm:px-20  py-5 text-white rounded-2xl text-[1.1rem]">
               Contact Us
             </Button>
             <Button className=" text-accent-blue text-[1.1rem]">
@@ -50,8 +50,8 @@ const SocialMediaBanner = () => {
           </div>
         </div>
 
-        <div className="flex-1  max-sm:gap-6 gap-4 max-md:gap-8 px-4 flex  max-sm:flex-col  ">
-          <div className="flex-1 max-sm:gap-6  max-sm:flex-none  flex-col max-sm:mt-0  mt-20  max-md:h-[30rem] gap-10 flex items-center max-md:items-end max-sm:items-center">
+        <div className="flex-1  max-sm:gap-6  max-md:gap-8  flex  max-sm:flex-col  ">
+          <div className="flex-1 max-sm:gap-6  max-sm:flex-none  flex-col max-sm:mt-0  mt-20  max-md:h-[30rem] gap-10 flex items-end max-md:items-end max-sm:items-center">
             <div className="relative rounded-xl flex-1  max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 ">
               {inView && (
                 <CountUp
@@ -88,7 +88,7 @@ const SocialMediaBanner = () => {
               <p className="text-[1.2rem] z-10">Customers</p>
             </div>
           </div>
-          <div className=" flex-1 max-sm:gap-6 max-sm:flex-none  flex-col max-sm:mt-0    max-md:h-[30rem]  gap-10 flex items- max-md:items-start max-sm:items-center ">
+          <div className=" flex-1 max-sm:gap-6 max-sm:flex-none  flex-col max-sm:mt-0    max-md:h-[30rem]  gap-10 flex items-end max-md:items-start max-sm:items-center  ">
             <div className="rounded-xl flex-1 max-w-[250px] max-h-[250px] w-full  bg-white  text-black flex flex-col items-center justify-center gap-4 relative">
               {inView && (
                 <CountUp

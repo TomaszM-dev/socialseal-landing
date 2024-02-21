@@ -7,11 +7,8 @@ const useResize = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width <= 1000) {
-        setIsTabScreen(true);
-      } else if (width <= 685) {
-        setIsMobileScreen(true);
-      }
+      setIsTabScreen(width >= 685 && width <= 1008);
+      setIsMobileScreen(width <= 685);
     };
 
     handleResize();

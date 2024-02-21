@@ -2,10 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logoImg from "../../public/logo/social-seal-logo.png";
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import { navbarDropdownData } from "@/data/Navbar-dropdown-data";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
-import { NavbarDropdownData } from "@/types/NavbarTypes";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarLinks from "./NavbarLinks";
 import { fadeIn } from "@/animations/animations";
@@ -41,7 +38,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* genertaing navbar links */}
         {!resize.isTabScreen && !resize.isMobileScreen && <NavbarLinks />}
         {resize.isMobileScreen || (
           <Button className="bg-accent-orange px-7 py-3 rounde  text-white">
