@@ -9,8 +9,8 @@ import social from "../../public/growing-audience-banner/social.png";
 
 const GrowingAudienceBanner = () => {
   return (
-    <section className=" mt-[-4rem] max-md:mt-[0rem] max-md:pt-0 max-md:flex-col max-md:items-center flex section  max-md:flex-col-reverse pt-40 pb-20  max-md:text-center ]">
-      <div className="max-md:mt-24 flex-1  gap-5 px-10 max-md:flex-col max-md:px-[5rem] max-sm:px-4 ">
+    <section className=" max-md:mt-[0rem] max-md:pt-0 max-md:flex-col max-md:items-center flex section  max-md:flex-col-reverse  pb-20  max-md:text-center ]">
+      <div className="max-md:mt-24 flex-1  gap-5 px-10 max-md:flex-col max-md:px-[5rem] max-sm:px-4 max">
         <div className="flex-1 flex flex-col gap-10">
           <motion.div
             initial={{ rotate: -15, x: -20 }}
@@ -22,7 +22,7 @@ const GrowingAudienceBanner = () => {
             <Image alt="" src={shape}></Image>
           </motion.div>
           <p className="text-[#F89E52] font-[400] text-[20px]">
-            Thinking "Outside The Box"
+            Thinking &quot;Outside The Box&quot;
           </p>
           <h2 className="text-[3.1rem] max-sm:text-[2.4rem] max-sm:leading-[3rem] font-[700] leading-[4rem]">
             Troubles Growing Your Audience?
@@ -30,8 +30,8 @@ const GrowingAudienceBanner = () => {
           <div className="flex  flex-col gap-6  text-[#727272]  font-[300] leading-[33px] text-[1.2rem]">
             <p className="">
               Attract new followers that are relevant to your objectives by
-              reaching outside your social media bubble, and you'll start to see
-              a quicker return on your investment.
+              reaching outside your social media bubble, and you&apos;ll start
+              to see a quicker return on your investment.
             </p>
             <p>
               Along with captivating visuals, our teams perform countless hours

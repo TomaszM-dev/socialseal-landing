@@ -3,6 +3,7 @@ import GrowingAudienceBanner from "@/components/ui/GrowingAudienceBanner";
 import Hero from "@/components/ui/Hero";
 import ReputationSalesBanner from "@/components/ui/ReputationSalesBanner";
 import SocialMediaBanner from "@/components/ui/SocialMediaBanner";
+import TroublesWithAudienceBanner from "@/components/ui/TroublesWithAudienceBanner";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <ContentBanner />
       <ReputationSalesBanner />
       <GrowingAudienceBanner />
+      <TroublesWithAudienceBanner />
     </div>
   );
 }

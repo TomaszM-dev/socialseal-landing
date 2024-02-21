@@ -14,7 +14,7 @@ import heartChat from "../../public/reputation-sales-banner/heart-red-chat.png";
 
 const ReputationSalesBanner = () => {
   return (
-    <section className=" mt-[-4rem] max-md:mt-[-7rem] max-md:flex-col max-md:items-center flex section  pt-40 pb-20  max-md:text-center ]">
+    <section className="max-md:mt-10 max-md:flex-col max-md:items-center flex section   pb-20  max-md:text-center ]">
       <div className="w-[55%] max-md:w-[70%] max-sm:w-[85%] max-sm:px-2  flex justify-center items-center">
         <div className="border-2 p-24  max-md:p-16 max-sm:p-12 max-slg:p-16 rounded-[20%] relative">
           <Image src={phone} className="" alt="" />

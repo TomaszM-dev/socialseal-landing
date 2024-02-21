@@ -28,13 +28,10 @@ const PhotoSlider = () => {
     } else setCurrentNumberSlides(3);
   }, [resize]);
 
-  console.log(resize.isMobileScreen);
-  console.log(resize.isTabScreen);
-  console.log(currentNumberSlides);
   return (
     <div className="w-[160%]  max-s1:w-[160%] max-slg:w-[190%] max-sm:w-[150%] max-md:w-full  mx-auto  ">
       <Swiper
-        spaceBetween={resize.isTabScreen ? 30 : 20}
+        spaceBetween={resize.isTabScreen ? 0 : 20}
         slidesPerView={resize.isMobileScreen ? 2 : currentNumberSlides}
         autoplay={{
           delay: 2500,
@@ -48,7 +45,7 @@ const PhotoSlider = () => {
             <Image
               src={image.src}
               alt={`Slider Image ${index + 1}`}
-              className=" max-md:w-full max-w-[370px] max-md:max-w-full  max-sm:w-[100%] max-sm:mx-auto  "
+              className=" max-md:w-[90%] max-md:mx-auto max-w-[370px] max-md:max-w-full  max-sm:w-[100%] max-sm:mx-auto  "
               width={400}
               height={400}
             />

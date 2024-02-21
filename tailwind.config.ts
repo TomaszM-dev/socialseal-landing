@@ -13,6 +13,18 @@ const config: Config = {
           "0%, 100%": { transform: "translateX(-10px)" },
           "50%": { transform: "translateX(10px)" },
         },
+        fly: {
+          from: { transform: "rotate(0deg) translateX(200px) rotate(0deg) " },
+          to: {
+            transform: "rotate(360deg) translateX(200px) rotate(-360deg)",
+          },
+        },
+        flyRev: {
+          from: {
+            transform: "rotate(360deg) translateX(240px) rotate(-360deg)",
+          },
+          to: { transform: "rotate(0deg) translateX(240px) rotate(0deg) " },
+        },
       },
       container: {
         padding: {
