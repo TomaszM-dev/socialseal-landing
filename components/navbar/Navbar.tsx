@@ -10,31 +10,20 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarLinks from "./NavbarLinks";
 import { fadeIn } from "@/animations/animations";
 import Button from "../common/Button";
+import useResize from "@/hooks/useResize";
 
 const Navbar = () => {
-  const [isMobileScreen, setIsMobileScreen] = useState(false);
-  const [isTabletScreen, setIsTabletScreen] = useState(false);
+  const resize = useResize();
   const [openLinks, setOpenLinks] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      setIsMobileScreen(width <= 685);
-      setIsTabletScreen(width > 685 && width <= 1008);
-    };
-
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setOpenLinks(false);
       }
     };
-    handleResize();
-    handleResize();
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -53,8 +42,8 @@ const Navbar = () => {
         </div>
 
         {/* genertaing navbar links */}
-        {!isTabletScreen && !isMobileScreen && <NavbarLinks />}
-        {isMobileScreen || (
+        {!resize.isTabScreen && !resize.isMobileScreen && <NavbarLinks />}
+        {resize.isMobileScreen || (
           <Button className="bg-accent-orange px-7 py-3 rounde  text-white">
             Speak With Us
           </Button>
@@ -66,7 +55,7 @@ const Navbar = () => {
         />
       </div>
       <AnimatePresence mode="wait">
-        {openLinks && isTabletScreen && (
+        {openLinks && resize.isTabScreen && (
           <motion.div
             variants={fadeIn("down", 0.1)}
             initial={{ opacity: 0 }}
@@ -79,7 +68,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <AnimatePresence mode="wait">
-        {openLinks && isMobileScreen && (
+        {openLinks && resize.isMobileScreen && (
           <motion.div
             variants={fadeIn("down", 0.1)}
             initial={{ opacity: 0 }}

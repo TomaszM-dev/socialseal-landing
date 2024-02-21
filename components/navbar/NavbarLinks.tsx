@@ -7,32 +7,24 @@ import MobileDropdown from "../dropdown/MobileDropdown";
 import Link from "next/link";
 import DeskopDropdown from "../dropdown/desktop-dropdown-components/DesktopDropdown";
 import { fadeIn } from "@/animations/animations";
-
+import useResize from "@/hooks/useResize";
 const navbarData: NavbarDropdownData = navbarDropdownData();
 const NavbarLinks = () => {
-  const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const resize = useResize();
+
   const [dropdownStates, setDropdownStates] = useState<{
     [key: string]: boolean;
   }>({});
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      setIsMobileScreen(width <= 685);
-    };
-
     const handleScroll = () => {
       if (window.scrollY > 200) {
         setDropdownStates({});
       }
     };
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -78,7 +70,7 @@ const NavbarLinks = () => {
               )}
             </div>
           </Link>
-          {!isMobileScreen ? (
+          {!resize.isMobileScreen ? (
             <AnimatePresence mode="wait">
               {dropdownStates[data.link] && <DeskopDropdown data={data} />}
             </AnimatePresence>
