@@ -64,11 +64,12 @@ const ContentBanner = () => {
           <PhotoSlider />
         </div>
 
-        {resize.isTabScreen && (
-          <Button className="max-md:self-center max-md:bg-accent-blue px-12 max-sm:px-20 w-fit max-sm:w-full   py-5 text-white rounded-2xl text-[1.1rem]">
-            View More
-          </Button>
-        )}
+        {resize.isTabScreen ||
+          (resize.isMobileScreen && (
+            <Button className="max-md:self-center max-md:bg-accent-blue px-12 max-sm:px-20 w-fit max-sm:w-full   py-5 text-white rounded-2xl text-[1.1rem]">
+              View More
+            </Button>
+          ))}
       </div>
     </section>
   );

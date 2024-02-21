@@ -32,7 +32,7 @@ const PhotoSlider = () => {
   console.log(resize.isTabScreen);
   console.log(currentNumberSlides);
   return (
-    <div className="w-[160%]  max-s1:w-[160%] max-s2:w-[190%] max-sm:w-[150%] max-md:w-full  mx-auto  ">
+    <div className="w-[160%]  max-s1:w-[160%] max-slg:w-[190%] max-sm:w-[150%] max-md:w-full  mx-auto  ">
       <Swiper
         spaceBetween={resize.isTabScreen ? 30 : 20}
         slidesPerView={resize.isMobileScreen ? 2 : currentNumberSlides}

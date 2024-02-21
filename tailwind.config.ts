@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        move: {
+          "0%, 100%": { transform: "translateX(-10px)" },
+          "50%": { transform: "translateX(10px)" },
+        },
+      },
       container: {
         padding: {
           DEFAULT: "15px",
@@ -18,7 +24,7 @@ const config: Config = {
         xmd: "1100px",
         md: "1008px",
         s1: "1250px",
-        s2: "1150px",
+        slg: "1150px",
         lg: "1440px",
         xl: "1560px",
       },
