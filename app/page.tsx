@@ -1,4 +1,5 @@
 import ContentBanner from "@/components/ui/ContentBanner";
+import CreativeDesigns from "@/components/ui/CreativeDesigns";
 import GrowingAudienceBanner from "@/components/ui/GrowingAudienceBanner";
 import Hero from "@/components/ui/Hero";
 import RedefineYourBrand from "@/components/ui/RedefineYourBrand";
@@ -17,6 +18,7 @@ export default function Home() {
       <GrowingAudienceBanner />
       <TroublesWithAudienceBanner />
       <RedefineYourBrand />
+      <CreativeDesigns />
     </div>
   );
 }
