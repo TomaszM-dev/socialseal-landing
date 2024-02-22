@@ -6,6 +6,7 @@ import RedefineYourBrand from "@/components/ui/RedefineYourBrand";
 import ReputationSalesBanner from "@/components/ui/ReputationSalesBanner";
 import SocialMediaBanner from "@/components/ui/SocialMediaBanner";
 import TroublesWithAudienceBanner from "@/components/ui/TroublesWithAudienceBanner";
+import WhatWeDo from "@/components/ui/WhatWeDo";
 import Image from "next/image";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <TroublesWithAudienceBanner />
       <RedefineYourBrand />
       <CreativeDesigns />
+      <WhatWeDo />
     </div>
   );
 }
