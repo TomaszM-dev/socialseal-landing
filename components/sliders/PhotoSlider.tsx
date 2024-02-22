@@ -37,6 +37,7 @@ const PhotoSlider = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        loop={true}
         modules={[Autoplay, Pagination, Navigation]}
         className=""
       >

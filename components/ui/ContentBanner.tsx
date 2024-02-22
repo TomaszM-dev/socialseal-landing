@@ -6,7 +6,7 @@ import line2 from "../../public/content-banner/line2.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/animations/animations";
-import PhotoSlider from "./PhotoSlider";
+import PhotoSlider from "../sliders/PhotoSlider";
 import useResize from "@/hooks/useResize";
 
 const ContentBanner = () => {
